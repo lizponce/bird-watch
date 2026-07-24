@@ -4,28 +4,28 @@
       "name": "Early Bird Strategies",
       "url": "https://earlybirdlife.com",
       "expect_status": [200, 301, 302],
-      "expect_text": null,
+      "expect_text": "Skip the Agency Bloat",
       "timeout": 15
     },
     {
       "name": "LZR Marketing",
       "url": "https://lzrmarketing.com",
       "expect_status": [200, 301, 302],
-      "expect_text": null,
+      "expect_text": "We Solve Marketing Problems",
       "timeout": 15
     },
     {
       "name": "DCA-CardLinx",
       "url": "https://digcomall.org",
       "expect_status": [200, 301, 302],
-      "expect_text": null,
+      "expect_text": "exclusive multi-industry association",
       "timeout": 15
     },
     {
       "name": "FMHero",
       "url": "https://fmhero.com",
       "expect_status": [200, 301, 302],
-      "expect_text": null,
+      "expect_text": "Refrigerant Compliance",
       "timeout": 15
     },
     {
@@ -46,56 +46,56 @@
       "name": "Staging Dreamscapes",
       "url": "https://stagingdreamscapes.com",
       "expect_status": [200, 301, 302],
-      "expect_text": null,
+      "expect_text": "Transforming Houses",
       "timeout": 15
     },
     {
       "name": "Desert Landscape Solutions",
       "url": "https://desertlandscapesolutions.com",
       "expect_status": [200, 301, 302],
-      "expect_text": null,
+      "expect_text": "Experience Luxury Landscaping",
       "timeout": 15
     },
     {
       "name": "Who's Your Tech",
       "url": "https://whosyourtech.com",
       "expect_status": [200, 301, 302],
-      "expect_text": null,
+      "expect_text": "Tech Solutions, Anytime",
       "timeout": 15
     },
     {
       "name": "Yellowstone Plumbing",
       "url": "https://yellowstoneplumbing.com",
       "expect_status": [200, 301, 302],
-      "expect_text": null,
+      "expect_text": "Don't Let Your Plumbing Go Wild",
       "timeout": 15
     },
     {
       "name": "Prescott Hotel",
       "url": "https://prescotthotelapartments.com",
       "expect_status": [200, 301, 302],
-      "expect_text": null,
+      "expect_text": "beloved landmark",
       "timeout": 15
     },
     {
       "name": "MBI Automation",
       "url": "https://mbiautomation.com",
       "expect_status": [200, 301, 302],
-      "expect_text": null,
+      "expect_text": "Indsutrial Controls",
       "timeout": 15
     },
     {
       "name": "Desert Data Consulting",
       "url": "https://desertdataconsulting.com",
       "expect_status": [200, 301, 302],
-      "expect_text": null,
+      "expect_text": "Nonprofit Data",
       "timeout": 15
     },
     {
       "name": "Stock Pot Malden",
       "url": "https://stockpotmalden.com",
       "expect_status": [200, 301, 302],
-      "expect_text": null,
+      "expect_text": "Transforming Local Food",
       "timeout": 15
     },
     {
