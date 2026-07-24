@@ -8,10 +8,101 @@
       "timeout": 15
     },
     {
-      "name": "Example Client HVAC",
-      "url": "https://example-client.com",
-      "expect_status": [200],
-      "expect_text": "Request a quote",
+      "name": "LZR Marketing",
+      "url": "https://lzrmarketing.com",
+      "expect_status": [200, 301, 302],
+      "expect_text": null,
+      "timeout": 15
+    },
+    {
+      "name": "DCA-CardLinx",
+      "url": "https://digcomall.org",
+      "expect_status": [200, 301, 302],
+      "expect_text": null,
+      "timeout": 15
+    },
+    {
+      "name": "FMHero",
+      "url": "https://fmhero.com",
+      "expect_status": [200, 301, 302],
+      "expect_text": null,
+      "timeout": 15
+    },
+    {
+      "name": "Fuse Flex Space",
+      "url": "https://fuseflexspace.com",
+      "expect_status": [200, 301, 302],
+      "expect_text": null,
+      "timeout": 15
+    },
+    {
+      "name": "Helser Brothers",
+      "url": "https://helserbrothers.com",
+      "expect_status": [200, 301, 302],
+      "expect_text": null,
+      "timeout": 15
+    },
+    {
+      "name": "Staging Dreamscapes",
+      "url": "https://stagingdreamscapes.com",
+      "expect_status": [200, 301, 302],
+      "expect_text": null,
+      "timeout": 15
+    },
+    {
+      "name": "Desert Landscape Solutions",
+      "url": "https://desertlandscapesolutions.com",
+      "expect_status": [200, 301, 302],
+      "expect_text": null,
+      "timeout": 15
+    },
+    {
+      "name": "Who's Your Tech",
+      "url": "https://whosyourtech.com",
+      "expect_status": [200, 301, 302],
+      "expect_text": null,
+      "timeout": 15
+    },
+    {
+      "name": "Yellowstone Plumbing",
+      "url": "https://yellowstoneplumbing.com",
+      "expect_status": [200, 301, 302],
+      "expect_text": null,
+      "timeout": 15
+    },
+    {
+      "name": "Prescott Hotel",
+      "url": "https://prescotthotelapartments.com",
+      "expect_status": [200, 301, 302],
+      "expect_text": null,
+      "timeout": 15
+    },
+    {
+      "name": "MBI Automation",
+      "url": "https://mbiautomation.com",
+      "expect_status": [200, 301, 302],
+      "expect_text": null,
+      "timeout": 15
+    },
+    {
+      "name": "Desert Data Consulting",
+      "url": "https://desertdataconsulting.com",
+      "expect_status": [200, 301, 302],
+      "expect_text": null,
+      "timeout": 15
+    },
+    {
+      "name": "Stock Pot Malden",
+      "url": "https://stockpotmalden.com",
+      "expect_status": [200, 301, 302],
+      "expect_text": null,
+      "timeout": 15
+    },
+    {
+      "name": "Interior Designer Demo",
+      "url": "https://interiordesigner.poweredbylzr.com",
+      "expect_status": [200, 301, 302],
+      "expect_text": null,
       "timeout": 15
     }
   ]
