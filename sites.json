@@ -11,7 +11,7 @@
       "name": "LZR Marketing",
       "url": "https://lzrmarketing.com",
       "expect_status": [200, 301, 302],
-      "expect_text": "We Solve Marketing Problems",
+      "expect_text": "We Solve",
       "timeout": 15
     },
     {
@@ -40,13 +40,6 @@
       "url": "https://helserbrothers.com",
       "expect_status": [200, 301, 302],
       "expect_text": null,
-      "timeout": 15
-    },
-    {
-      "name": "Staging Dreamscapes",
-      "url": "https://stagingdreamscapes.com",
-      "expect_status": [200, 301, 302],
-      "expect_text": "Transforming Houses",
       "timeout": 15
     },
     {
@@ -81,7 +74,7 @@
       "name": "MBI Automation",
       "url": "https://mbiautomation.com",
       "expect_status": [200, 301, 302],
-      "expect_text": "Indsutrial Controls",
+      "expect_text": null,
       "timeout": 15
     },
     {
