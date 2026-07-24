@@ -1,0 +1,79 @@
+name: Bird Watch
+
+on:
+  schedule:
+    # Every 5 minutes. GitHub queues cron jobs, so expect some drift.
+    - cron: "*/5 * * * *"
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+concurrency:
+  group: uptime
+  cancel-in-progress: false
+
+jobs:
+  check:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Install dependencies
+        run: pip install requests
+
+      - name: Run checks
+        id: check
+        continue-on-error: true
+        run: python scripts/check.py
+
+      - name: Commit results
+        run: |
+          git config user.name "uptime-bot"
+          git config user.email "uptime-bot@users.noreply.github.com"
+          git add data/status.json
+          if git diff --staged --quiet; then
+            echo "No change to commit"
+          else
+            git commit -m "Uptime check: ${{ steps.check.outputs.down_count }} down"
+            git pull --rebase --autostash origin ${{ github.ref_name }} || true
+            git push
+          fi
+
+      - name: Send email alert
+        if: steps.check.outputs.has_alerts == 'true'
+        uses: dawidd6/action-send-mail@v3
+        with:
+          server_address: smtp.gmail.com
+          server_port: 465
+          secure: true
+          username: ${{ secrets.MAIL_USERNAME }}
+          password: ${{ secrets.MAIL_PASSWORD }}
+          from: Early Bird Uptime
+          to: ${{ secrets.ALERT_EMAIL }}
+          subject: "Bird Watch alert: ${{ steps.check.outputs.down_count }} down"
+          body: |
+            ${{ steps.check.outputs.alert_body }}
+
+            Checked at ${{ github.event.repository.updated_at }}
+            Full board: https://${{ github.repository_owner }}.github.io/${{ github.event.repository.name }}/
+
+      - name: Send SMS alert
+        if: steps.check.outputs.has_alerts == 'true'
+        continue-on-error: true
+        env:
+          SID: ${{ secrets.TWILIO_SID }}
+          TOKEN: ${{ secrets.TWILIO_TOKEN }}
+          FROM: ${{ secrets.TWILIO_FROM }}
+          TO: ${{ secrets.ALERT_PHONE }}
+        run: |
+          if [ -z "$SID" ]; then echo "Twilio not configured, skipping"; exit 0; fi
+          curl -s -X POST "https://api.twilio.com/2010-04-01/Accounts/$SID/Messages.json" \
+            --data-urlencode "From=$FROM" \
+            --data-urlencode "To=$TO" \
+            --data-urlencode "Body=${{ steps.check.outputs.alert_body }}" \
+            -u "$SID:$TOKEN" > /dev/null

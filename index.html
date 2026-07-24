@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Bird Watch &middot; Early Bird Strategies</title>
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Rubik+Mono+One&family=JetBrains+Mono:wght@400;500;700&display=swap" rel="stylesheet" />
+<style>
+  :root {
+    --navy:  #111039;
+    --lime:  #c7d600;
+    --sky:   #41b6e6;
+    --coral: #ff6f61;
+    --sand:  #efe9d8;
+
+    --panel: rgba(239,233,216,0.05);
+    --line:  rgba(239,233,216,0.14);
+  }
+
+  * { box-sizing: border-box; }
+
+  body {
+    margin: 0;
+    background: var(--navy);
+    color: var(--sand);
+    font-family: 'JetBrains Mono', ui-monospace, monospace;
+    font-size: 13px;
+    padding: 36px 22px 80px;
+  }
+
+  .wrap { max-width: 1000px; margin: 0 auto; }
+
+  .display {
+    font-family: 'Rubik Mono One', 'JetBrains Mono', monospace;
+    font-weight: 400;
+    text-transform: uppercase;
+  }
+
+  .brand { display: flex; align-items: center; gap: 18px; }
+  .logo { width: 62px; height: auto; display: block; flex-shrink: 0; }
+
+  .head {
+    display: flex; justify-content: space-between; align-items: flex-end;
+    gap: 20px; flex-wrap: wrap;
+    padding-bottom: 20px; border-bottom: 2px solid var(--lime);
+  }
+  h1 { font-size: 40px; letter-spacing: -0.5px; margin: 0; line-height: 0.92; color: var(--sand); }
+  h1 em { font-style: normal; color: var(--lime); }
+  .sub { font-size: 11px; letter-spacing: 1.6px; text-transform: uppercase;
+         color: var(--sand); margin: 10px 0 0; }
+  .stamp { font-size: 11px; color: rgba(239,233,216,0.55); text-align: right; }
+
+  .stats { display: grid; grid-template-columns: repeat(auto-fit, minmax(150px,1fr));
+           gap: 12px; margin: 26px 0; }
+  .stat { background: var(--panel); border: 1px solid var(--line); border-radius: 3px; padding: 18px; }
+  .stat b { display: block; font-size: 34px; line-height: 1; letter-spacing: 0.5px; color: var(--sand); }
+  .stat small { display: block; margin-top: 8px; font-size: 10px; letter-spacing: 1.6px;
+                text-transform: uppercase; color: rgba(239,233,216,0.55); }
+  .stat.ok b   { color: var(--lime); }
+  .stat.bad b  { color: var(--coral); }
+
+  .list { display: flex; flex-direction: column; gap: 10px; }
+  .row { background: var(--panel); border: 1px solid var(--line);
+         border-left: 3px solid var(--lime); border-radius: 3px; padding: 16px 18px; }
+  .row.down { border-left-color: var(--coral); background: rgba(255,111,97,0.09); }
+
+  .top { display: flex; justify-content: space-between; align-items: baseline;
+         gap: 16px; flex-wrap: wrap; }
+  .name { font-size: 13px; letter-spacing: -0.2px; line-height: 1.35; color: var(--sand); }
+  .url { font-size: 11px; color: var(--sky); margin-top: 4px; word-break: break-all; }
+  .state { font-size: 16px; letter-spacing: -0.2px; color: var(--lime); }
+  .row.down .state { color: var(--coral); }
+  .meta { font-size: 10.5px; color: rgba(239,233,216,0.55); margin-top: 5px; text-align: right; }
+
+  .reason { margin-top: 11px; font-size: 11.5px; color: var(--coral);
+            background: rgba(255,111,97,0.12); border-left: 2px solid var(--coral);
+            padding: 9px 12px; border-radius: 2px; }
+
+  .bars { display: flex; gap: 2px; margin-top: 13px; height: 24px; align-items: flex-end; }
+  .bar { flex: 1; min-width: 2px; height: 100%; background: var(--lime);
+         border-radius: 1px; opacity: 0.55; }
+  .bar.d { background: var(--coral); opacity: 1; }
+
+  .empty { text-align: center; padding: 70px 20px;
+           border: 1px dashed var(--line); border-radius: 3px; }
+  .empty p { font-size: 20px; line-height: 1.4; margin: 0 0 10px; color: var(--sky); letter-spacing: 0.5px; }
+  .empty small { color: rgba(239,233,216,0.55); font-size: 12px; }
+
+  @media (max-width: 560px) {
+    h1 { font-size: 27px; }
+    .logo { width: 46px; }
+    .brand { gap: 13px; }
+    .stat b { font-size: 28px; }
+    .state { font-size: 15px; }
+    .meta { text-align: left; }
+  }
+</style>
+</head>
+<body>
+<div class="wrap">
+  <div class="head">
+    <div class="brand">
+      <img class="logo" src="EarlyBird-simple_light.png" alt="Early Bird Strategies" />
+      <div>
+        <h1 class="display">Bird <em>Watch</em></h1>
+        <p class="sub">Early Bird Strategies &middot; Client Uptime Board</p>
+      </div>
+    </div>
+    <div class="stamp" id="stamp">Loading&hellip;</div>
+  </div>
+  <div class="stats" id="stats"></div>
+  <div class="list" id="list"></div>
+</div>
+
+<script>
+function esc(s) {
+  return String(s).replace(/[&<>"]/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]));
+}
+function ago(iso) {
+  if (!iso) return '';
+  const s = Math.round((Date.now() - new Date(iso)) / 1000);
+  if (s < 60) return s + 's ago';
+  if (s < 3600) return Math.round(s / 60) + 'm ago';
+  if (s < 86400) return Math.round(s / 3600) + 'h ago';
+  return Math.round(s / 86400) + 'd ago';
+}
+
+fetch('../data/status.json?_=' + Date.now())
+  .then(r => { if (!r.ok) throw new Error('no data'); return r.json(); })
+  .then(d => { if (!d.generated_at) throw new Error('empty'); render(d); })
+  .catch(() => {
+    document.getElementById('stamp').textContent = 'No data yet';
+    document.getElementById('list').innerHTML =
+      '<div class="empty"><p class="display">Nothing on the board yet</p>' +
+      '<small>Run the workflow once from the Actions tab to generate the first report.</small></div>';
+  });
+
+function render(d) {
+  document.getElementById('stamp').textContent = 'Last checked ' + ago(d.generated_at);
+
+  document.getElementById('stats').innerHTML = [
+    '<div class="stat"><b class="display">' + d.total + '</b><small>Sites watched</small></div>',
+    '<div class="stat ok"><b class="display">' + d.up + '</b><small>Up</small></div>',
+    '<div class="stat' + (d.down ? ' bad' : '') + '"><b class="display">' + d.down + '</b><small>Down</small></div>'
+  ].join('');
+
+  document.getElementById('list').innerHTML = d.sites.map(s => {
+    const hist = (s.history || []).slice(-60);
+    const bars = hist.map(h => '<div class="bar' + (h.up ? '' : ' d') + '" title="' + esc(h.t) + '"></div>').join('');
+    const meta = [];
+    if (s.status_code) meta.push('HTTP ' + s.status_code);
+    if (s.response_ms != null) meta.push(s.response_ms + 'ms');
+    if (s.uptime_24h != null) meta.push(s.uptime_24h + '% / 24h');
+    meta.push(ago(s.checked_at));
+
+    return [
+      '<div class="row' + (s.up ? '' : ' down') + '">',
+      '  <div class="top">',
+      '    <div><div class="name display">' + esc(s.name) + '</div>',
+      '    <div class="url">' + esc(s.url) + '</div></div>',
+      '    <div><div class="state display">' + (s.up ? 'UP' : 'DOWN') + '</div>',
+      '    <div class="meta">' + meta.join(' &middot; ') + '</div></div>',
+      '  </div>',
+      s.reason ? '  <div class="reason">' + esc(s.reason) + '</div>' : '',
+      bars ? '  <div class="bars">' + bars + '</div>' : '',
+      '</div>'
+    ].join('');
+  }).join('');
+}
+</script>
+</body>
+</html>

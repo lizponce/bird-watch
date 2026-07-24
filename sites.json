@@ -1,0 +1,18 @@
+{
+  "sites": [
+    {
+      "name": "Early Bird Strategies",
+      "url": "https://earlybirdlife.com",
+      "expect_status": [200, 301, 302],
+      "expect_text": null,
+      "timeout": 15
+    },
+    {
+      "name": "Example Client HVAC",
+      "url": "https://example-client.com",
+      "expect_status": [200],
+      "expect_text": "Request a quote",
+      "timeout": 15
+    }
+  ]
+}
