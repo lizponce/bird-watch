@@ -25,6 +25,7 @@ STATUS_FILE = os.path.join(ROOT, "data", "status.json")
 HISTORY_POINTS = 288
 
 UA = "EarlyBirdUptime/1.0 (+https://earlybirdlife.com)"
+UPTIME_SHARED_SECRET = os.environ.get("UPTIME_SHARED_SECRET")
 
 
 def load_json(path, fallback):
@@ -48,16 +49,20 @@ def check_site(site):
         "checked_at": datetime.now(timezone.utc).isoformat(timespec="seconds"),
     }
 
+    headers = {
+        "User-Agent": UA,
+        "Accept": "text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8",
+        "Accept-Language": "en-US,en;q=0.9",
+        "Accept-Encoding": "gzip, deflate",
+    }
+    if UPTIME_SHARED_SECRET:
+        headers["X-Uptime-Key"] = UPTIME_SHARED_SECRET
+
     try:
         r = requests.get(
             url,
             timeout=timeout,
-            headers={
-                "User-Agent": UA,
-                "Accept": "text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8",
-                "Accept-Language": "en-US,en;q=0.9",
-                "Accept-Encoding": "gzip, deflate",
-            },
+            headers=headers,
             allow_redirects=True,
         )
         elapsed = int((time.monotonic() - start) * 1000)

@@ -31,6 +31,8 @@ jobs:
       - name: Run checks
         id: check
         continue-on-error: true
+        env:
+          UPTIME_SHARED_SECRET: ${{ secrets.UPTIME_SHARED_SECRET }}
         run: python scripts/check.py
 
       - name: Publish results to docs
