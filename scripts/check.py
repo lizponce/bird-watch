@@ -67,7 +67,7 @@ def check_site(site):
         if r.status_code not in expect_status:
             result["up"] = False
             result["reason"] = f"Returned {r.status_code}, expected {expect_status}"
-        elif expect_text and expect_text not in r.text:
+        elif expect_text and expect_text.lower() not in r.text.lower():
             result["up"] = False
             result["reason"] = f"Page loaded but missing expected text: {expect_text!r}"
         else:

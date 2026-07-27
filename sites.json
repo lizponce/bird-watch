@@ -4,7 +4,7 @@
       "name": "Early Bird Strategies",
       "url": "https://earlybirdlife.com",
       "expect_status": [200, 301, 302],
-      "expect_text": "Skip the Agency Bloat",
+      "expect_text": "Skip the agency bloat",
       "timeout": 15
     },
     {
