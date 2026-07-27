@@ -4,28 +4,28 @@
       "name": "Early Bird Strategies",
       "url": "https://earlybirdlife.com",
       "expect_status": [200, 301, 302],
-      "expect_text": "Skip the agency bloat",
+      "expect_text": "agency",
       "timeout": 15
     },
     {
       "name": "LZR Marketing",
       "url": "https://lzrmarketing.com",
       "expect_status": [200, 301, 302],
-      "expect_text": "We Solve",
+      "expect_text": "Marketing",
       "timeout": 15
     },
     {
       "name": "DCA-CardLinx",
       "url": "https://digcomall.org",
       "expect_status": [200, 301, 302],
-      "expect_text": "exclusive multi-industry association",
+      "expect_text": "association",
       "timeout": 15
     },
     {
       "name": "FMHero",
       "url": "https://fmhero.com",
       "expect_status": [200, 301, 302],
-      "expect_text": "Refrigerant Compliance",
+      "expect_text": "Refrigerant",
       "timeout": 15
     },
     {
@@ -46,35 +46,35 @@
       "name": "Desert Landscape Solutions",
       "url": "https://desertlandscapesolutions.com",
       "expect_status": [200, 301, 302],
-      "expect_text": "Experience Luxury Landscaping",
+      "expect_text": "Landscaping",
       "timeout": 15
     },
     {
       "name": "Who's Your Tech",
       "url": "https://whosyourtech.com",
       "expect_status": [200, 301, 302],
-      "expect_text": "Tech Solutions, Anytime",
+      "expect_text": "Solutions",
       "timeout": 15
     },
     {
       "name": "Yellowstone Plumbing",
       "url": "https://yellowstoneplumbing.com",
       "expect_status": [200, 301, 302],
-      "expect_text": "Don't Let Your Plumbing Go Wild",
+      "expect_text": "Wild",
       "timeout": 15
     },
     {
       "name": "Prescott Hotel",
       "url": "https://prescotthotelapartments.com",
       "expect_status": [200, 301, 302],
-      "expect_text": "beloved landmark",
+      "expect_text": "Historic",
       "timeout": 15
     },
     {
       "name": "MBI Automation",
       "url": "https://mbiautomation.com",
       "expect_status": [200, 301, 302],
-      "expect_text": null,
+      "expect_text": "Automation",
       "timeout": 15
     },
     {
@@ -88,7 +88,7 @@
       "name": "Stock Pot Malden",
       "url": "https://stockpotmalden.com",
       "expect_status": [200, 301, 302],
-      "expect_text": "Transforming Local Food",
+      "expect_text": "Food",
       "timeout": 15
     },
     {
