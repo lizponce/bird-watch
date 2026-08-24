@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-08-24T16:42:43+00:00",
+  "generated_at": "2026-08-24T17:15:50+00:00",
   "total": 14,
   "up": 12,
   "down": 2,
@@ -7,17 +7,12 @@
     {
       "name": "Early Bird Strategies",
       "url": "https://earlybirdlife.com",
-      "checked_at": "2026-08-24T16:42:43+00:00",
-      "response_ms": 70,
+      "checked_at": "2026-08-24T17:15:50+00:00",
+      "response_ms": 152,
       "status_code": 403,
       "up": false,
       "reason": "Returned 403, expected [200, 301, 302]",
       "history": [
-        {
-          "t": "2026-08-18T06:15:56+00:00",
-          "up": false,
-          "ms": 56
-        },
         {
           "t": "2026-08-18T07:07:13+00:00",
           "up": false,
@@ -1452,6 +1447,11 @@
           "t": "2026-08-24T16:42:43+00:00",
           "up": false,
           "ms": 70
+        },
+        {
+          "t": "2026-08-24T17:15:50+00:00",
+          "up": false,
+          "ms": 152
         }
       ],
       "uptime_24h": 0.0,
@@ -1460,17 +1460,12 @@
     {
       "name": "LZR Marketing",
       "url": "https://lzrmarketing.com",
-      "checked_at": "2026-08-24T16:42:43+00:00",
-      "response_ms": 263,
+      "checked_at": "2026-08-24T17:15:50+00:00",
+      "response_ms": 320,
       "status_code": 200,
       "up": true,
       "reason": null,
       "history": [
-        {
-          "t": "2026-08-18T06:15:56+00:00",
-          "up": true,
-          "ms": 349
-        },
         {
           "t": "2026-08-18T07:07:13+00:00",
           "up": true,
@@ -2905,6 +2900,11 @@
           "t": "2026-08-24T16:42:43+00:00",
           "up": true,
           "ms": 263
+        },
+        {
+          "t": "2026-08-24T17:15:50+00:00",
+          "up": true,
+          "ms": 320
         }
       ],
       "uptime_24h": 97.57,
@@ -2913,17 +2913,12 @@
     {
       "name": "DCA-CardLinx",
       "url": "https://digcomall.org",
-      "checked_at": "2026-08-24T16:42:44+00:00",
-      "response_ms": 671,
+      "checked_at": "2026-08-24T17:15:51+00:00",
+      "response_ms": 2540,
       "status_code": 200,
       "up": true,
       "reason": null,
       "history": [
-        {
-          "t": "2026-08-18T06:15:56+00:00",
-          "up": true,
-          "ms": 599
-        },
         {
           "t": "2026-08-18T07:07:13+00:00",
           "up": true,
@@ -4358,6 +4353,11 @@
           "t": "2026-08-24T16:42:43+00:00",
           "up": true,
           "ms": 671
+        },
+        {
+          "t": "2026-08-24T17:15:50+00:00",
+          "up": true,
+          "ms": 2540
         }
       ],
       "uptime_24h": 70.14,
@@ -4366,17 +4366,12 @@
     {
       "name": "FMHero",
       "url": "https://fmhero.com",
-      "checked_at": "2026-08-24T16:42:44+00:00",
-      "response_ms": 463,
+      "checked_at": "2026-08-24T17:15:53+00:00",
+      "response_ms": 419,
       "status_code": 200,
       "up": true,
       "reason": null,
       "history": [
-        {
-          "t": "2026-08-18T06:15:56+00:00",
-          "up": true,
-          "ms": 361
-        },
         {
           "t": "2026-08-18T07:07:13+00:00",
           "up": true,
@@ -5811,6 +5806,11 @@
           "t": "2026-08-24T16:42:43+00:00",
           "up": true,
           "ms": 463
+        },
+        {
+          "t": "2026-08-24T17:15:50+00:00",
+          "up": true,
+          "ms": 419
         }
       ],
       "uptime_24h": 100.0,
@@ -5819,17 +5819,12 @@
     {
       "name": "Fuse Flex Space",
       "url": "https://fuseflexspace.com",
-      "checked_at": "2026-08-24T16:42:45+00:00",
-      "response_ms": 2432,
+      "checked_at": "2026-08-24T17:15:54+00:00",
+      "response_ms": 2582,
       "status_code": 200,
       "up": true,
       "reason": null,
       "history": [
-        {
-          "t": "2026-08-18T06:15:56+00:00",
-          "up": true,
-          "ms": 383
-        },
         {
           "t": "2026-08-18T07:07:13+00:00",
           "up": true,
@@ -7264,6 +7259,11 @@
           "t": "2026-08-24T16:42:43+00:00",
           "up": true,
           "ms": 2432
+        },
+        {
+          "t": "2026-08-24T17:15:50+00:00",
+          "up": true,
+          "ms": 2582
         }
       ],
       "uptime_24h": 99.65,
@@ -7272,17 +7272,12 @@
     {
       "name": "Helser Brothers",
       "url": "https://helserbrothers.com",
-      "checked_at": "2026-08-24T16:42:47+00:00",
-      "response_ms": 742,
+      "checked_at": "2026-08-24T17:15:56+00:00",
+      "response_ms": 771,
       "status_code": 200,
       "up": true,
       "reason": null,
       "history": [
-        {
-          "t": "2026-08-18T06:15:56+00:00",
-          "up": true,
-          "ms": 829
-        },
         {
           "t": "2026-08-18T07:07:13+00:00",
           "up": true,
@@ -8717,6 +8712,11 @@
           "t": "2026-08-24T16:42:43+00:00",
           "up": true,
           "ms": 742
+        },
+        {
+          "t": "2026-08-24T17:15:50+00:00",
+          "up": true,
+          "ms": 771
         }
       ],
       "uptime_24h": 100.0,
@@ -8725,17 +8725,12 @@
     {
       "name": "Desert Landscape Solutions",
       "url": "https://desertlandscapesolutions.com",
-      "checked_at": "2026-08-24T16:42:48+00:00",
-      "response_ms": 1566,
+      "checked_at": "2026-08-24T17:15:57+00:00",
+      "response_ms": 1047,
       "status_code": 200,
       "up": true,
       "reason": null,
       "history": [
-        {
-          "t": "2026-08-18T06:15:56+00:00",
-          "up": true,
-          "ms": 1031
-        },
         {
           "t": "2026-08-18T07:07:13+00:00",
           "up": true,
@@ -10170,6 +10165,11 @@
           "t": "2026-08-24T16:42:43+00:00",
           "up": true,
           "ms": 1566
+        },
+        {
+          "t": "2026-08-24T17:15:50+00:00",
+          "up": true,
+          "ms": 1047
         }
       ],
       "uptime_24h": 63.19,
@@ -10178,17 +10178,12 @@
     {
       "name": "Who's Your Tech",
       "url": "https://whosyourtech.com",
-      "checked_at": "2026-08-24T16:42:50+00:00",
-      "response_ms": 141,
+      "checked_at": "2026-08-24T17:15:58+00:00",
+      "response_ms": 166,
       "status_code": 200,
       "up": true,
       "reason": null,
       "history": [
-        {
-          "t": "2026-08-18T06:15:56+00:00",
-          "up": true,
-          "ms": 159
-        },
         {
           "t": "2026-08-18T07:07:13+00:00",
           "up": true,
@@ -11623,6 +11618,11 @@
           "t": "2026-08-24T16:42:43+00:00",
           "up": true,
           "ms": 141
+        },
+        {
+          "t": "2026-08-24T17:15:50+00:00",
+          "up": true,
+          "ms": 166
         }
       ],
       "uptime_24h": 100.0,
@@ -11631,17 +11631,12 @@
     {
       "name": "Yellowstone Plumbing",
       "url": "https://yellowstoneplumbing.com",
-      "checked_at": "2026-08-24T16:42:50+00:00",
-      "response_ms": 159,
+      "checked_at": "2026-08-24T17:15:58+00:00",
+      "response_ms": 130,
       "status_code": 200,
       "up": true,
       "reason": null,
       "history": [
-        {
-          "t": "2026-08-18T06:15:56+00:00",
-          "up": true,
-          "ms": 109
-        },
         {
           "t": "2026-08-18T07:07:13+00:00",
           "up": true,
@@ -13076,6 +13071,11 @@
           "t": "2026-08-24T16:42:43+00:00",
           "up": true,
           "ms": 159
+        },
+        {
+          "t": "2026-08-24T17:15:50+00:00",
+          "up": true,
+          "ms": 130
         }
       ],
       "uptime_24h": 62.85,
@@ -13084,17 +13084,12 @@
     {
       "name": "Prescott Hotel",
       "url": "https://prescotthotelapartments.com",
-      "checked_at": "2026-08-24T16:42:50+00:00",
-      "response_ms": 1652,
+      "checked_at": "2026-08-24T17:15:58+00:00",
+      "response_ms": 1858,
       "status_code": 200,
       "up": true,
       "reason": null,
       "history": [
-        {
-          "t": "2026-08-18T06:15:56+00:00",
-          "up": true,
-          "ms": 608
-        },
         {
           "t": "2026-08-18T07:07:13+00:00",
           "up": true,
@@ -14529,6 +14524,11 @@
           "t": "2026-08-24T16:42:43+00:00",
           "up": true,
           "ms": 1652
+        },
+        {
+          "t": "2026-08-24T17:15:50+00:00",
+          "up": true,
+          "ms": 1858
         }
       ],
       "uptime_24h": 91.67,
@@ -14537,17 +14537,12 @@
     {
       "name": "MBI Automation",
       "url": "https://mbiautomation.com",
-      "checked_at": "2026-08-24T16:42:52+00:00",
-      "response_ms": 1334,
+      "checked_at": "2026-08-24T17:16:00+00:00",
+      "response_ms": 1287,
       "status_code": 200,
       "up": true,
       "reason": null,
       "history": [
-        {
-          "t": "2026-08-18T06:15:56+00:00",
-          "up": true,
-          "ms": 2566
-        },
         {
           "t": "2026-08-18T07:07:13+00:00",
           "up": true,
@@ -15982,6 +15977,11 @@
           "t": "2026-08-24T16:42:43+00:00",
           "up": true,
           "ms": 1334
+        },
+        {
+          "t": "2026-08-24T17:15:50+00:00",
+          "up": true,
+          "ms": 1287
         }
       ],
       "uptime_24h": 100.0,
@@ -15990,17 +15990,12 @@
     {
       "name": "Desert Data Consulting",
       "url": "https://desertdataconsulting.com",
-      "checked_at": "2026-08-24T16:42:53+00:00",
-      "response_ms": 269,
+      "checked_at": "2026-08-24T17:16:02+00:00",
+      "response_ms": 274,
       "status_code": 200,
       "up": true,
       "reason": null,
       "history": [
-        {
-          "t": "2026-08-18T06:15:56+00:00",
-          "up": true,
-          "ms": 345
-        },
         {
           "t": "2026-08-18T07:07:13+00:00",
           "up": true,
@@ -17435,6 +17430,11 @@
           "t": "2026-08-24T16:42:43+00:00",
           "up": true,
           "ms": 269
+        },
+        {
+          "t": "2026-08-24T17:15:50+00:00",
+          "up": true,
+          "ms": 274
         }
       ],
       "uptime_24h": 96.53,
@@ -17443,17 +17443,12 @@
     {
       "name": "Stock Pot Malden",
       "url": "https://stockpotmalden.com",
-      "checked_at": "2026-08-24T16:42:53+00:00",
-      "response_ms": 760,
+      "checked_at": "2026-08-24T17:16:02+00:00",
+      "response_ms": 634,
       "status_code": 200,
       "up": true,
       "reason": null,
       "history": [
-        {
-          "t": "2026-08-18T06:15:56+00:00",
-          "up": true,
-          "ms": 571
-        },
         {
           "t": "2026-08-18T07:07:13+00:00",
           "up": true,
@@ -18888,6 +18883,11 @@
           "t": "2026-08-24T16:42:43+00:00",
           "up": true,
           "ms": 760
+        },
+        {
+          "t": "2026-08-24T17:15:50+00:00",
+          "up": true,
+          "ms": 634
         }
       ],
       "uptime_24h": 99.65,
@@ -18896,17 +18896,12 @@
     {
       "name": "Interior Designer Demo",
       "url": "https://interiordesigner.poweredbylzr.com",
-      "checked_at": "2026-08-24T16:42:54+00:00",
+      "checked_at": "2026-08-24T17:16:03+00:00",
       "up": false,
       "status_code": null,
-      "response_ms": 177,
+      "response_ms": 212,
       "reason": "SSL problem: HTTPSConnectionPool(host='interiordesigner.poweredbylzr.com', port=443): Max retries exceeded with url: / (Caused by SSLError(SSLCertVerificationError(1, '[SSL: CERTIFICATE_VERIFY_",
       "history": [
-        {
-          "t": "2026-08-18T06:15:56+00:00",
-          "up": false,
-          "ms": 243
-        },
         {
           "t": "2026-08-18T07:07:13+00:00",
           "up": false,
@@ -20341,6 +20336,11 @@
           "t": "2026-08-24T16:42:43+00:00",
           "up": false,
           "ms": 177
+        },
+        {
+          "t": "2026-08-24T17:15:50+00:00",
+          "up": false,
+          "ms": 212
         }
       ],
       "uptime_24h": 0.0,
